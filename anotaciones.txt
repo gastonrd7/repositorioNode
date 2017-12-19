@@ -1,0 +1,9 @@
+npm init (para cargarle parametros a nuestra api)
+npm install express --save (facilita crear una api rest)
+npm install body-parser --save / npm -i -S body-parser
+   : esto nos permite poder parsear el cuerpo de la peticion, esos datos que enviemos tratar y recogerlos en node
+   : funciona como midleware, son capas que se le va añadiendo
+npm install nodemon --devDependencies / npm i -D nodemon
+   : esto nos permite poder generar cambios y que se puedan visualizar cuando tenemos nuestra app node corriendo,
+	sino deberiamos haberla parado y volver a ejecutar para poder verlos.
+   : luego ponemos en script "start": "nodemon index.js", y ya cada cambio es reflejado con nuestra app corriendo
