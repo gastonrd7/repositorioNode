@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "debug": "DEBUG=pd* nodemon --inspect-brk --harmony --nolazy server.js -e js,mustache,json,yaml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gaston Ruiz Diaz",

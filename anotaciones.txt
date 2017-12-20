@@ -7,3 +7,5 @@ npm install nodemon --devDependencies / npm i -D nodemon
    : esto nos permite poder generar cambios y que se puedan visualizar cuando tenemos nuestra app node corriendo,
 	sino deberiamos haberla parado y volver a ejecutar para poder verlos.
    : luego ponemos en script "start": "nodemon index.js", y ya cada cambio es reflejado con nuestra app corriendo
+
+Instalar jsonformaterr en el chrome

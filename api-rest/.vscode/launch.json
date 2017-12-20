@@ -8,8 +8,12 @@
             "type": "node",
             "request": "launch",
             "name": "Iniciar programa",
-            "program": "${workspaceRoot}\\index.js",
-            "cwd": "${workspaceRoot}"
+            "program": "${workspaceRoot}/index.js",
+            "cwd": "${workspaceRoot}",
+            "skipFiles": [
+                "node_modules/**/*.js"
+            ],
+            "protocol": "auto"
         },
         {
             "type": "node",
