@@ -1,3 +1,6 @@
+npm run start
+npm start
+
 npm init (para cargarle parametros a nuestra api)
 npm install express --save (facilita crear una api rest)
 npm install body-parser --save / npm -i -S body-parser
@@ -9,3 +12,35 @@ npm install nodemon --devDependencies / npm i -D nodemon
    : luego ponemos en script "start": "nodemon index.js", y ya cada cambio es reflejado con nuestra app corriendo
 
 Instalar jsonformaterr en el chrome
+
+--InstalarMongoDB
+mongodb.org
+https://www.mongodb.com/download-center?jmp=nav#atlas
+contraseña: Gmatias1234*
+
+"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --dbpath C:\MongoDb\data\db ///// (iniciar el motor, pero guardar los datos donde le indique)
+"C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe" ///// para conectar con las base de datos, show dbs
+
+	arrrancar mongo
+	mongod (.exe) (hacer correr mongo, si o si)
+	acceder a la bd(conectar), al motor, si ya esta corriendo
+	mongo (.exe)
+	show dbs
+
+	necesitamos un driver para conectarnos de la api a mongo
+	este seria: mongoose
+-------------------------
+
+npm i -S mongoose (libreria que nos permite conectar nuestra api con mongoDB)
+
+con mongoose vamos a modelar nuestra BD, generar nuestros esquemas
+
+npm i -S bcrypt-nodejs //sirve para encriptar la contraseña antes de guardar en la bd
+npm i -S crypto // genera un hash con respecto al gravatar, no se muy bien como es esto
+
+usar jspn webtoker, para autenticacion de nuestra api, totalmente desacoplada de la UI
+https://jwt.io (el toker se guarda en local starage, o sesion starage, y este token viajara en la cabecera de la llamada)
+nodejs.com y buscar jwt-simple
+
+npm install jwt-simple
+npm i -S moment //libreria que ayuda con las fechas

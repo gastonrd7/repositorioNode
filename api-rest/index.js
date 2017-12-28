@@ -1,39 +1,21 @@
 'use strict'
 
-const express = require('express')
-const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+const app = require('./app')
+const config = require('./config')
 
-//import expres from 'express'
+mongoose.connect(config.db, (err, res) => {
+    if (err) {
+        return console.log(`Error al conectar con la Bd: ${err}`)
+    }
 
-const app = express()
-const port = process.env.PORT || 3000
+    console.log('Conexion a la bd establecida...')
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-
-app.get('/api/product', (req, res) => {
-    res.status(200).send({products: [] })
-})
-
-app.get('/api/product/:productId', (req, res) => {
-
-})
-
-app.post('/api/product', (req, res) => {
-    console.log(req.body)
-    res.status(200).send({message: 'El producto se ah recibido' })
-})
-
-app.put('/api/product/:productId', (req, res) => {
-
-})
-
-app.delete('/api/product/:productId', (req, res) => {
-
+    app.listen(config.port, () => {
+        console.log(`Api rest corriendo en localhost:${config.port}`)
+    })
+    
 })
 
 
-app.listen(port, () => {
-    console.log(`Api rest corriendo en localhost:${port}`)
-})
 
