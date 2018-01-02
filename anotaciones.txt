@@ -44,3 +44,13 @@ nodejs.com y buscar jwt-simple
 
 npm install jwt-simple
 npm i -S moment //libreria que ayuda con las fechas
+
+------------aun no implementado en este proyecto, lo hice en otro----------------
+Para meterle swagger
+npm install -g swagger
+
+swagger project create PruebaPiloto
+swagger project start
+swagger project edit
+----------------------------------------------------------------------------------
+https://www.heroku.com/
