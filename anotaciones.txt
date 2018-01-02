@@ -53,4 +53,15 @@ swagger project create PruebaPiloto
 swagger project start
 swagger project edit
 ----------------------------------------------------------------------------------
+Pra subir nuestra Api, recordar que tenemos firebase tambien, previamente trabajamos con ella
 https://www.heroku.com/
+nos descargamos el cliente, para verificar que esta instalado heroku --version
+Para poder desplegar la aplicacion debemos hacer:
+cmd
+C:\React\RepositorioNode\api-rest>heroku login
+Enter your Heroku credentials:
+Email: gaston.rd7@gmail.com
+Password: ***********
+
+bindear nuestro proyecto al creado en la web de heroku
+heroku git:remote -a api-rest-2017 
