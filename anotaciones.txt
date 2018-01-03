@@ -1,6 +1,7 @@
 npm run start
 npm start
 
+
 npm init (para cargarle parametros a nuestra api)
 npm install express --save (facilita crear una api rest)
 npm install body-parser --save / npm -i -S body-parser
