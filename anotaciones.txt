@@ -63,5 +63,35 @@ Enter your Heroku credentials:
 Email: gaston.rd7@gmail.com
 Password: ***********
 
-bindear nuestro proyecto al creado en la web de heroku
-heroku git:remote -a api-rest-2017 
+b----Install the Heroku CLI----
+Download and install the Heroku CLI.
+$ heroku login
+
+----Create a new Git repository----
+$ cd my-project/
+$ git init
+$ heroku git:remote -a api-rest-rd2017
+
+
+----Existing Git repository----
+$ heroku git:remote -a api-rest-rd2017
+
+----Deploy your application----
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+----para ver el log de heroku----
+heroku logs
+
+creo una variable en heroku, cuando suba esta variable va a existin, entonces entra por ese lado
+ya que en el config tengo esto : db: process.env.PROD_MONGODB || 'mongodb://localhost:27017/shop'
+heroku config:set PROD_MONGODB=mongodb://gaston:Gmatias1234@ds239587.mlab.com:39587/heroku_jpz3m3m0
+tuve que sacar esto de la api para poder subirla
+"scripts": {
+    "start": "nodemon index.js",
+    
+		"debug": "DEBUG=pd* nodemon --inspect-brk --harmony --nolazy server.js -e js,mustache,json,yaml",
+    
+		"test": "echo \"Error: no test specified\" && exit 1"
+  },

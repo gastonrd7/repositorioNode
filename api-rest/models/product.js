@@ -5,10 +5,12 @@ const Schema = mongoose.Schema
 
 const ProductSchema = Schema({
     name: String,
-    picture: String,
+    image: String,
     price: { type: Number, default: 0 },
     category: { type: String, enum: ['computers', 'phones', 'accesories']},
-    descripcion: String
+    description: String,
+    availability: { type: Number, default: 0 },
+    deliveryStimate: String
 })
 
 module.exports = mongoose.model('Product', ProductSchema)
